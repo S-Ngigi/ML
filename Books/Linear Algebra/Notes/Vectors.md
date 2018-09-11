@@ -42,6 +42,22 @@ We could say that they had to go a lot to the east and a little to the south.
 
 If we were to plot the above the result would be a vector pointing 8 positive units to the *x axis* -2 on the *y axis*.
 
+### Vector Addition, Subtraction & Magnitude
+
+Suppose we have two vectors $\vec{a}$ and $\vec{b}$. We know that
+
+>$$\vec{a} + \vec{b} = \vec{c}$$
+
+From this we can understand that subtraction of vectors $\vec{a} - \vec{b}$ visually as
+>$$\vec{a} + (-\vec{b}) = \vec{d}$$
+
+What about the resulting magnitude of vectors $\vec{c}$ or $\vec{d}$. We can infer from pythagoras theorem that the hypotenuse is derived from the square root of the sum of square of the opposite side(height) and the adjacent side(base). i.e in a right angled triangle
+
+>$$|c|^2 =|a|^2 + |b|^2 $$
+
+From this we establish that at any given time $|c|$ will never be greater than $|a|+|b|$, but can be equal to if $\vec{b}$ was an extension of $\vec{a}$ such that $\vec{b}$ was a scalar multiple of $\vec{a}$. Otherwise
+>$$|c|\leq |a| + |b|$$
+
 ## Scalar multiplication
 
 <hr>
