@@ -53,10 +53,11 @@ From this we can understand that subtraction of vectors $\vec{a} - \vec{b}$ visu
 
 What about the resulting magnitude of vectors $\vec{c}$ or $\vec{d}$. We can infer from pythagoras theorem that the hypotenuse is derived from the square root of the sum of square of the opposite side(height) and the adjacent side(base). i.e in a right angled triangle
 
->$$|c|^2 =|a|^2 + |b|^2 $$
+>$$\|c\| =\sqrt{\|a\|^2 + \|b\|^2}$$
 
 From this we establish that at any given time $|c|$ will never be greater than $|a|+|b|$, but can be equal to if $\vec{b}$ was an extension of $\vec{a}$ such that $\vec{b}$ was a scalar multiple of $\vec{a}$. Otherwise
->$$|c|\leq |a| + |b|$$
+
+>$$\|c\|\leq \|a\| + \|b\|$$
 
 ## Scalar multiplication
 
@@ -68,3 +69,29 @@ For example
 >$$3 \cdot \begin{bmatrix} 1 \\ 3\end{bmatrix} = \begin{bmatrix} 3 \\ 9\end{bmatrix}$$
 
 In that the vector $\begin{bmatrix} 1 \\ 3\end{bmatrix}$ will be 3 times its value.
+
+## Unit Vector
+
+A Unit vector is a vector with a  magnitude of 1. So suppose we have a vector $\vec{a} = (3,5)$. We know that we can find its magnitude using the pythagoras theorem. i.e
+
+>$$\|a\| = \sqrt{3^2 + 4^2}$$
+>$$\|a\| = \sqrt{9 + 16}$$
+>$$\|a\| = \sqrt{25}$$
+>$$\|a\| = 5$$
+
+So how would we derive the unit vector of $\vec{a}$ such that the magnitude is 1. Well in this case we have to scale down $\vec{a}$ by $\large\frac{1}{5}$ so that the resulting magnitude is 1.
+
+So the unit vector $\hat{u}$ of $\vec{a}$ would be
+
+> $$\hat{u} = (\frac{3}{\|a\|}, \frac{4}{\|a\|}) = (\frac{3}{5}, \frac{4}{5})$$
+
+Lets verify that the magnitude of $\hat{u}$ is 1. We know that it has the components $(\large\frac{3}{5}, \large\frac{4}{5})$. Therefore
+
+>$$\|\hat{u}\| = \sqrt{(\frac{3}{5})^2 + (\frac{4}{5})^2}$$
+>$$\|\hat{u}\| = \sqrt{\frac{9}{25} + \frac{16}{25}}$$
+>$$\|\hat{u}\| = \sqrt{\frac{25}{25}}$$
+>$$\|\hat{u}\| = \sqrt{1}$$
+>$$\|\hat{u}\| = 1$$
+
+So for vector $\vec{a}$ with components $(x, y)$ and magnitude $\|m\| = \sqrt{x^2 + y^2}$, we derive the unit vector $\hat{u}$ as follows
+>$$\hat{u} = (\frac{x}{\|m\|}, \frac{y}{\|m\|}) == (\frac{x}{\sqrt{x^2+y^2}}, \frac{y}{\sqrt{x^2+y^2}})$$
