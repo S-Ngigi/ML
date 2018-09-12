@@ -26,7 +26,7 @@ Broadly speaking there are 3 distinct bu related ideas of what vectors are.
 
 <hr>
 
-![Vector Addition](Vector-addition.jpg)
+![Vector Addition](assets/Vector-addition.jpg)
 
 Example above shows how vector addition would work.
 
@@ -95,3 +95,47 @@ Lets verify that the magnitude of $\hat{u}$ is 1. We know that it has the compon
 
 So for vector $\vec{a}$ with components $(x, y)$ and magnitude $\|m\| = \sqrt{x^2 + y^2}$, we derive the unit vector $\hat{u}$ as follows
 >$$\hat{u} = (\frac{x}{\|m\|}, \frac{y}{\|m\|}) == (\frac{x}{\sqrt{x^2+y^2}}, \frac{y}{\sqrt{x^2+y^2}})$$
+
+## Magnitude and direction form of vectors
+
+So we have talked of the **component form** of a vector denoted by,
+>$$\vec{a} = (x, y)$$
+
+There is also the unit vector form of a vector denoted by
+>$$\vec{a} = x\hat{i} + y\hat{j}$$
+
+Whereby $\hat{i} = (1, 0)$ and $\hat{j} = (0,1)$ and $x$ and $y$ are scalars.
+
+We can also express a vector in-terms of its **magnitude and direction form** angular wise. Such that,
+>$$\vec{a} = \|\vec{a}\|,\enspace \theta$$
+
+In this situation we derive the vector components by relating the magnitude of the vector with the angle the vector forms with the positive $x$ - axis.
+
+![Magnitude and Direction form](assets/mag-dir.png)
+
+Here we use trigonometry functions **SOH CAH TOA** to be able to derive whichever unknown we desire.
+
+>$$SOH->  \sin\theta = \Large \frac{opposite}{hypotenuse}$$
+>$$\sin\theta = \frac{V_y}{M}$$
+
+>$$CAH->  \cos\theta = \Large \frac{adjacent}{hypotenuse}$$
+>$$\cos\theta = \frac{V_x}{M}$$
+
+>$$TOH->  \tan\theta = \Large \frac{adjacent}{hypotenuse}$$
+>$$\tan\theta = \frac{V_y}{V_x}$$
+
+Suppose we have a vector $\vec{u}$ which is $\vec{u} = 3\hat{i}+4\hat{j}$. In component form we would write the vector $\vec{u}$ as the $(3,4)$.
+
+Suppose we want to know the angle $\vec{u}$ forms with the positive $x$ - axis. To do this we can use the trigonometric function **TOA** to figure out the angle. This is because we know
+>$$\tan\theta = \large \frac{opposite}{adjacent}$$
+And we know that the opposite side in this instance is 4 if we were to graph it and the adjacent side would be 3. So to find the angle
+
+>$$\tan\theta = \frac{4}{3}$$
+>$$\theta = \tan^{-1}\cdot\frac{4}{3}$$
+>$$\therefore \enspace \theta = 53.1\degree$$
+
+
+In general the $\tan\theta$ is always going to be $\frac{y}{x}$, where $x$ and $y$ are components of vector $\vec{a}$
+
+>$$\vec{a} = (x, y)$$
+>$$\tan\theta = \frac{y}{x}$$
