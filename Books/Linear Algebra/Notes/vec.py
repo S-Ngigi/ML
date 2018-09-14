@@ -10,7 +10,7 @@ import sys
 # mag_2 = int(sys.argv[3])
 # ang_2 = int(sys.argv[4])
 
-
+# Had to add self to functions for it to work with our dict of options
 def angle_mag(self, mag_1, ang_1, mag_2, ang_2):
   """  
   This function is meant to return the magnitude and angle direction
@@ -51,7 +51,8 @@ def angle_mag(self, mag_1, ang_1, mag_2, ang_2):
   # Print out a vectors magnitude and direction component form.
   print(f"New magnitude: {new_mag}\nNew angle: {new_ang}")
 
-# Test function to see if i can choose any given function
+# Test function to see if i can choose any given functions
+# Had to add self
 def test(self):
   print("Sup bruv")
 
