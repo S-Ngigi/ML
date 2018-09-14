@@ -49,3 +49,8 @@ def angle_mag(mag_1, ang_1, mag_2, ang_2):
   
 
 angle_mag(mag_1, ang_1, mag_2, ang_2)
+
+def test():
+  print("Sup bruv")
+
+test()
