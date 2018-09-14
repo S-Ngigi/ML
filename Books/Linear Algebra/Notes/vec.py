@@ -11,7 +11,7 @@ import sys
 # ang_2 = int(sys.argv[4])
 
 
-def angle_mag(mag_1, ang_1, mag_2, ang_2):
+def angle_mag(self, mag_1, ang_1, mag_2, ang_2):
   """  
   This function is meant to return the magnitude and angle direction
   of the vector derived from adding vectors 1 and 2
@@ -43,17 +43,26 @@ def angle_mag(mag_1, ang_1, mag_2, ang_2):
   if new_ang < 0:
     new_ang = 360 + new_ang
 
+  """
+  Returns
+  It is True. {mag_1} is a of type int.
+  """
   print(f"It is {isinstance(mag_1, int)}. {mag_1} is a of type {type(mag_1).__name__}.")
-
+  # Print out a vectors magnitude and direction component form.
   print(f"New magnitude: {new_mag}\nNew angle: {new_ang}")
 
-def test():
+# Test function to see if i can choose any given function
+def test(self):
   print("Sup bruv")
 
+# Option dictionary where i store my functions and their keys
 options = {
   "1": angle_mag,
   "2": test,
 }
-
-option, parameters = sys.argv[0], sys.argv[1:]
-options[option](*parameters)
+# sys.argv returns a list of argument. We convert them into integers
+params = [int(arg) for arg in sys.argv[1:]]
+# Assigning first arg to option and the rest to our other parameters
+option, args = sys.argv[1], params
+# calling appropriate function as per the key with relevant args
+options[option](*args)
