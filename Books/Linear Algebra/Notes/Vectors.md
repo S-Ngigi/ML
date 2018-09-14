@@ -134,8 +134,14 @@ And we know that the opposite side in this instance is 4 if we were to graph it 
 >$$\theta = \tan^{-1}\cdot\frac{4}{3}$$
 >$$\therefore \enspace \theta = 53.1\degree$$
 
-
 In general the $\tan\theta$ is always going to be $\frac{y}{x}$, where $x$ and $y$ are components of vector $\vec{a}$
 
 >$$\vec{a} = (x, y)$$
 >$$\tan\theta = \frac{y}{x}$$
+
+It is important to note that in python cos(x) is the cosine of radians x instead of cos of x degrees.
+
+So for example to find the resulting components of $\vec{a} = (x, y)$ given that $\vec{v} = (\|8\|, 140\degree)$ and $\vec{w} = (\|4\|, 40\degree)$ in python we would use
+>$$\vec{a} = (x, y)$$
+><span style="display:block; text-align:center;">`y = 8*cos(radians(140)) + 4*cos(radians(40))`</span>
+><span style="display:block; text-align:center;">`y = 8*sin(radians(140)) + 4*sin(radians(40))`</span>
