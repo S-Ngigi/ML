@@ -2,16 +2,25 @@
 from math import *
 import sys
 
-# Magnitude and angle of vector 1
-mag_1 = int(sys.argv[1])
-ang_1 = int(sys.argv[2])
+"""  
+Below we had outline sys arguments that we would assign to our vars.
 
-# Magnitude and angle of vector 2
-mag_2 = int(sys.argv[3])
-ang_2 = int(sys.argv[4])
+We don't need this anymore because created a dictionary to handle which function
+we want to run and give it the relevant argument through the list of sys.args[1:]
 
+Note that sys.argv[0] is the name of the file itself in this case vec.py and sys.argv[0] is the all the args given after the calling the file.
+"""
 
-def angle_mag(mag_1, ang_1, mag_2, ang_2):
+# # Magnitude and angle of vector 1
+# mag_1 = int(sys.argv[1])
+# ang_1 = int(sys.argv[2])
+
+# # Magnitude and angle of vector 2
+# mag_2 = int(sys.argv[3])
+# ang_2 = int(sys.argv[4])
+
+# Had to add self to functions for it to work with our dict of options
+def angle_mag(self, mag_1, ang_1, mag_2, ang_2):
   """  
   This function is meant to return the magnitude and angle direction
   of the vector derived from adding vectors 1 and 2
@@ -43,14 +52,40 @@ def angle_mag(mag_1, ang_1, mag_2, ang_2):
   if new_ang < 0:
     new_ang = 360 + new_ang
 
+  """
+  Returns
+  It is True. {mag_1} is a of type int.
+  """
   print(f"It is {isinstance(mag_1, int)}. {mag_1} is a of type {type(mag_1).__name__}.")
-
+  # Print out a vectors magnitude and direction component form.
   print(f"New magnitude: {new_mag}\nNew angle: {new_ang}")
-  
 
-angle_mag(mag_1, ang_1, mag_2, ang_2)
+def get_components(self, mag, theta):
+  """  
+  This function returns the x and y components of a vector, given its magnitude and the angle the vector makes with the positive x-axis
+  """
 
-def test():
+  # The x coordinate
+  x = mag*cos(radians(theta))
+  # The y coordinate
+  y = mag*sin(radians(theta))
+
+  print(f"The x coordinate: {x}\nThe y coordinate: {y}")
+
+# Test function to see if i can choose any given functions
+# Had to add self for it to work with our dictionary.
+def test(self):
   print("Sup bruv")
 
-test()
+# Option dictionary where i store my functions and their keys
+options = {
+  "1": angle_mag,
+  "2": get_components,
+  "3": test,
+}
+# sys.argv returns a list of argument. We convert them into integers
+params = [int(arg) for arg in sys.argv[1:]]
+# Assigning first arg to option and the rest to our other parameters
+option, args = sys.argv[1], params
+# calling appropriate function as per the key with relevant args
+options[option](*args)
