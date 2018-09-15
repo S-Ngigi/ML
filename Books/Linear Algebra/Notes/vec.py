@@ -51,15 +51,28 @@ def angle_mag(self, mag_1, ang_1, mag_2, ang_2):
   # Print out a vectors magnitude and direction component form.
   print(f"New magnitude: {new_mag}\nNew angle: {new_ang}")
 
+def get_components(self, mag, theta):
+  """  
+  This function returns the x and y components of a vector, given its magnitude and the angle the vector makes with the positive x-axis
+  """
+
+  # The x coordinate
+  x = mag*cos(radians(theta))
+  # The y coordinate
+  y = mag*sin(radians(theta))
+
+  print(f"The x coordinate: {x}\nThe y coordinate: {y}")
+
 # Test function to see if i can choose any given functions
-# Had to add self
+# Had to add self for it to work with our dictionary.
 def test(self):
   print("Sup bruv")
 
 # Option dictionary where i store my functions and their keys
 options = {
   "1": angle_mag,
-  "2": test,
+  "2": get_components,
+  "3": test,
 }
 # sys.argv returns a list of argument. We convert them into integers
 params = [int(arg) for arg in sys.argv[1:]]
